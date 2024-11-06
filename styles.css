@@ -1,0 +1,515 @@
+/*---------------------CSS by Christina -------------------------------------------*/
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+/*-------------------- CSS REST ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root{
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
+
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width:428px){
+	body{
+		margin: 0 auto;
+		display:grid;
+		grid-template-areas:
+		"header"
+		"nav"
+		"main"
+		"aside"
+		"footer";
+  }
+    header{
+		background-color: var(--green);
+		color: var(--white);
+		text-align: center;
+	}
+	header h1{
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 55px;
+	}
+	header p{
+		font-style: italic;
+	}
+
+	nav li {
+		display:flex;
+		bottom: 20px;
+		left: 20px;
+	  }
+
+	nav a{
+		background-color: var(--orange);
+		padding: 20px;
+		text-decoration: none;
+		color: var(--white);
+		width: 80px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-color: var(--white);
+	}
+
+	[href="#top"] {
+		position:fixed;
+		width: 20px;
+		bottom:50px;
+		right:0px;
+	  }
+	h2{
+		background-color: var(--green);
+		color:var(--white);
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 30px;
+	}
+
+	#fruits h2, #vegetables h2 {
+		background-color: var(--white);
+		color: var(--black);
+		width: 100px;
+		text-align: center;
+    }
+	h3{
+
+		font-family: 'Irish Grover', sans-serif;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	p{
+		line-height:1.25em;
+		margin-top: 1.5rem;
+		font-size: 18px;
+	}
+	figcaption {
+		background-color: var(--black);
+		color: var(--white);
+		width: 100px;
+		line-height: 2em;
+		text-align: center;
+		position: relative;
+		bottom: 150px;
+		left: 200px;
+	}
+	table, address{
+		background-color: var(--green);
+		color: var(--white);
+	}
+	footer{
+		text-align: center;
+		color: var(--green);
+	}
+
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width:834px){
+	body{
+		margin: 0 auto;
+		display:grid;
+		grid-template-areas:
+		"header header"
+		"nav nav"
+		"main main"
+		"aside footer";
+  }
+    header{
+		background-color: var(--green);
+		color: var(--white);
+		text-align: center;
+	}
+	header h1{
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 55px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	header p{
+		font-style: italic;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	nav li {
+		display:flex;
+		bottom: 20px;
+		left: 20px;
+	  }
+
+	nav a{
+		background-color: var(--orange);
+		padding: 20px;
+		text-decoration: none;
+		color: var(--white);
+		width: 80px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-color: var(--white);
+	}
+
+	[href="#top"] {
+		position:fixed;
+		width: 20px;
+		bottom:50px;
+		right:0px;
+	  }
+	h2{
+		background-color: var(--green);
+		color:var(--white);
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 30px;
+	}
+
+	#fruits h2, #vegetables h2 {
+		background-color: var(--white);
+		color: var(--black);
+		width: 100px;
+		text-align: center;
+    }
+	#fruits{
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+	#vegetables{
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	h3{
+
+		font-family: 'Irish Grover', sans-serif;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	p{
+		line-height:1.25em;
+		margin-top: 1.5rem;
+		font-size: 18px;
+	}
+	figcaption {
+		background-color: var(--black);
+		color: var(--white);
+		width: 100px;
+		line-height: 2em;
+		text-align: center;
+		position: relative;
+		bottom: 150px;
+		left: 200px;
+	}
+	table, address{
+		background-color: var(--green);
+		color: var(--white);
+	}
+	footer{
+		text-align: center;
+		color: var(--green);
+	}
+
+
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width:1280px){
+	body{
+		margin: 0 auto;
+		display:grid;
+		grid-template-areas:
+		"header header"
+		"nav nav"
+		"main main"
+		"aside footer";
+  }
+    header{
+		background-color: var(--green);
+		color: var(--white);
+		text-align: center;
+	}
+	header h1{
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 55px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	header p{
+		font-style: italic;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	nav li {
+		display:flex;
+		bottom: 20px;
+		left: 20px;
+	  }
+
+	nav a{
+		background-color: var(--orange);
+		padding: 20px;
+		text-decoration: none;
+		color: var(--white);
+		width: 80px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-color: var(--white);
+	}
+
+	[href="#top"] {
+		position:fixed;
+		width: 20px;
+		bottom:50px;
+		right:0px;
+	  }
+	h2{
+		background-color: var(--green);
+		color:var(--white);
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 30px;
+	}
+
+	#fruits h2, #vegetables h2 {
+		background-color: var(--white);
+		color: var(--black);
+		width: 100px;
+		text-align: center;
+    }
+	#fruits{
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+	#vegetables{
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	h3{
+
+		font-family: 'Irish Grover', sans-serif;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	p{
+		line-height:1.25em;
+		margin-top: 1.5rem;
+		font-size: 18px;
+	}
+	figcaption {
+		background-color: var(--black);
+		color: var(--white);
+		width: 100px;
+		line-height: 2em;
+		text-align: center;
+		position: relative;
+		bottom: 150px;
+		left: 200px;
+	}
+	table, address{
+		background-color: var(--green);
+		color: var(--white);
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+	footer{
+		text-align: center;
+		color: var(--green);
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+
+
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width:1440px){
+	body{
+		margin: 0 auto;
+		display:grid;
+		grid-template-areas:
+		"header header"
+		"nav nav"
+		"main main"
+		"aside footer";
+  }
+    header{
+		background-color: var(--green);
+		color: var(--white);
+		text-align: center;
+	}
+	header h1{
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 55px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	header p{
+		font-style: italic;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	nav li {
+		display:flex;
+		bottom: 20px;
+		left: 20px;
+	  }
+
+	nav a{
+		background-color: var(--orange);
+		padding: 20px;
+		text-decoration: none;
+		color: var(--white);
+		width: 80px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-color: var(--white);
+	}
+
+	[href="#top"] {
+		position:fixed;
+		width: 20px;
+		bottom:50px;
+		right:0px;
+	  }
+	h2{
+		background-color: var(--green);
+		color:var(--white);
+		font-family: 'Irish Grover', sans-serif;
+		font-size: 30px;
+	}
+
+	#fruits h2, #vegetables h2 {
+		background-color: var(--white);
+		color: var(--black);
+		width: 100px;
+		text-align: center;
+    }
+	#fruits{
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+	#vegetables{
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+
+	h3{
+
+		font-family: 'Irish Grover', sans-serif;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	p{
+		line-height:1.25em;
+		margin-top: 1.5rem;
+		font-size: 18px;
+	}
+	figcaption {
+		background-color: var(--black);
+		color: var(--white);
+		width: 100px;
+		line-height: 2em;
+		text-align: center;
+		position: relative;
+		bottom: 150px;
+		left: 200px;
+	}
+	table, address{
+		background-color: var(--green);
+		color: var(--white);
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+	footer{
+		text-align: center;
+		color: var(--green);
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+	}
+
+
+}
